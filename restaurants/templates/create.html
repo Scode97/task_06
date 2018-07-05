@@ -5,6 +5,13 @@
         <title>Create</title>
     </head>
     <body>
-        
+    	<form action="{% url 'restaurant-list'%}" method="POST">
+    		{% csrf_token %}
+    		{{form.as_p}}
+        <input type="submit" value="SUBMIT">
+
+        </form>
+
+
     </body>
 </html>
